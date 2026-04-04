@@ -11,8 +11,14 @@ Help() {
 }
 
 search_by_label() {
-	local label="$1"
-        gh search issues -- "label:$label"
+	local labels="$1"
+	local gh_args=()
+	
+	IFS=',' read -ra label_array <<< "$labels"
+
+	for label in "${label_array[@]}"; do 
+		gh_args+=(--label "$label")
+	done
+	
+	gh search issues "${gh_args[@]}"
 }
-
-
