@@ -1,0 +1,1 @@
+switch api to contribufind for cleaner logic, then contribufind getopts should call api.sh
