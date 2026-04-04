@@ -13,6 +13,6 @@ gh search issues --label "good first issue" --label docs --language python --lan
 With contribufind:
 
 contribufind -l "good first issue,docs" -g "python,shell"
-
+```
 Goal:
 Faster open-source discovery with less typing.
