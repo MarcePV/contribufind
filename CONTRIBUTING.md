@@ -1,8 +1,9 @@
-Thanks.
+# Contributing
 
-Anything works. All suggestions are welcome and I'm not experienced enough for bash env vars and sourcing to bin
+Fork the repo, make a branch, and open a pull request.
 
-What this means for you:
+Keep changes small and focused.
 
-i don't care about docker or any of that complicated stuff, you can just make a fork and make the pr.
-i don't like complicated open source, and if it ends up breaking down the line we'll go back and fix it. 
+Don’t introduce unnecessary complexity.
+
+If you're unsure, just open a PR and we’ll figure it out.

@@ -1,20 +1,18 @@
-Open Source CLI wrapper for gh cli (github terminal browser)
+# Contribufind
 
-Why:
-    I wanted to contribute to open source but github website kinda blows
-    you have to wait for github website to refresh, type very specific and not beginner-friendly syntax is search bar
-    if you don't like what you saw on github website, you have to do the whole long process over again until you find what you like
+CLI wrapper around `gh` to make finding GitHub issues faster.
 
-What this project does:
-    helps with bottlenecks finding the right open source repository for you 
+## Why
+GitHub issue search is repetitive and slow.
 
-examples:
-   with      gh :(      -> gh search issues --label "good first issue" --label "docs" --label "up for grabs" --language "shell" --language "python"
+## Example
 
-   with contribufind :) -> contribufind -l "good first issue,docs,up for grabs" -g "shell,python" 
+```bash
+gh search issues --label "good first issue" --label docs --language python --language shell
 
+With contribufind:
 
-benefits:
-    easier to type
-    saves time
-    helps you get that awesome big tech resume faster
+contribufind -l "good first issue,docs" -g "python,shell"
+
+Goal:
+Faster open-source discovery with less typing.
