@@ -21,3 +21,16 @@ search_by_label() {
 	
 	gh search issues "${gh_args[@]}"
 }
+
+search_by_language() {
+	local languages="$1"
+	local gh_args=()
+	
+	IFS=',' read -ra language_array <<< "$languages"
+
+	for language in "${language_array[@]}"; do 
+		gh_args+=(--language "$language")
+	done
+	
+	gh search issues "${gh_args[@]}"
+}

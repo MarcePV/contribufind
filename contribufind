@@ -6,7 +6,7 @@ set -euo pipefail
 
 
 # only looks for issues rn
-while getopts ":hl:" opt; do
+while getopts ":hl:g:" opt; do
 	case $opt in
 		:)
 			Help;;	
@@ -14,6 +14,9 @@ while getopts ":hl:" opt; do
 			Help;;
 		l)
 			search_by_label "$OPTARG";;
+		g)
+			search_by_language "$OPTARG";;
+
 		*)
 			echo "error parsing positional args" >&2
 			exit 1
