@@ -1,32 +1,21 @@
 #!/usr/bin/env bash
 
-Help() {
-	echo contribufind help
-	echo opts:
-	echo -l: specify a label to search issues for
-	echo -L: specify an array of labels to search issues for
-	echo -h: this manual	
-}
+set -euo pipefail
+
+. ./api
 
 
 # only looks for issues rn
-while getopts ":hlL" opt; do
+while getopts "hl:" opt; do
 	case $opt in
 		h)
-			Help
-			;;
+			Help;;
 		l)
-			gh search issues -- "label:$OPTARG"
-			;;
-		L)
-			label_str=''
-			for label in $OPTARG; do
-				label_str+="$label"	
-			done
-			gh search issues -- "lable:$lable_str"	
-			;;
-		?/)
-			echo "bro what"
+			echo "optarg: $OPTARG" 
+			search_by_label "$OPTARG";;
+		*)
+			echo "error parsing positional args" >&2
+			exit 1
 			;;
 	esac	
 done
