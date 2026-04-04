@@ -6,8 +6,10 @@ set -euo pipefail
 
 
 # only looks for issues rn
-while getopts "hl:" opt; do
+while getopts ":hl:" opt; do
 	case $opt in
+		:)
+			Help;;	
 		h)
 			Help;;
 		l)
