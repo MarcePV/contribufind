@@ -3,10 +3,10 @@
 set -euo pipefail
 
 Help() {
-        echo contribufind help
-        echo opts:
-        echo -l: specify labels to filter issues for
-        echo -h: this manual    
+    echo contribufind help
+    echo opts:
+	echo -l: specify labels to filter issues for
+    echo -h: this manual    
 }
 
 search_by_label() {
