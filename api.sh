@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+. ./utils.sh
+
 Help() {
     echo contribufind help
     echo opts:
