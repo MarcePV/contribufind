@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-. ./api
+. ./api.sh
 
 
 # only looks for issues rn
